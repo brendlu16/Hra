@@ -16,14 +16,17 @@ using System.Windows.Shapes;
 namespace Hra
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro Lokace1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Lokace1 : Page
     {
-        public MainWindow()
+        public Lokace1()
         {
             InitializeComponent();
-            MainFrame.NavigationService.Navigate(new MenuPage());
+        }
+        private void Rectangle_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MenuPage());
         }
     }
 }
