@@ -20,13 +20,27 @@ namespace Hra
     /// </summary>
     public partial class Lokace1 : Page
     {
+        bool InvOtevren = false;
         public Lokace1()
         {
             InitializeComponent();
         }
         private void Rectangle_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MenuPage());
+            NavigationService.Navigate(new Lokace2());
+        }
+        private void OpenCloseInv(object sender, RoutedEventArgs e)
+        {
+            if (InvOtevren)
+            {
+                InvFrame.Navigate(null);
+                InvOtevren = false;
+            }
+            else
+            {
+                InvFrame.Navigate(new InvPage());
+                InvOtevren = true;
+            }
         }
     }
 }
