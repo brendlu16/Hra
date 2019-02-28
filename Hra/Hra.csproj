@@ -79,6 +79,7 @@
     <Compile Include="InvPage.xaml.cs">
       <DependentUpon>InvPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
     <Compile Include="Lokace1.xaml.cs">
       <DependentUpon>Lokace1.xaml</DependentUpon>
     </Compile>
