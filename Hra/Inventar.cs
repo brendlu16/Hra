@@ -10,6 +10,9 @@ namespace Hra
 {
     class Inventar
     {
-        List<Item> Items = new List<Item>();
+        public List<Item> Items = new List<Item>();
+        public int Penize;
+        public Item VybaveneBrneni;
+        public Item VybavenaHelma;
     }
 }

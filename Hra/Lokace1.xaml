@@ -11,8 +11,5 @@
     <Grid Name="PageGrid">
         <Rectangle Fill="#00FF00" HorizontalAlignment="Left" Height="103" Stroke="Black" VerticalAlignment="Bottom" Width="113" Margin="687,0,0,0"/>
         <Button Click="Rectangle_Click" HorizontalAlignment="Left" Height="103" VerticalAlignment="Bottom" Width="113" Background="Transparent" BorderBrush="Transparent" Margin="687,0,0,0"/>
-        <Frame NavigationUIVisibility="Hidden" Name="InvFrame"/>
-        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Right" Height="103" Stroke="Black" VerticalAlignment="Top" Width="113"/>
-        <Button Click="OpenCloseInv" HorizontalAlignment="Right" Height="103" VerticalAlignment="Top" Width="113" Background="Transparent" BorderBrush="Transparent"/>
     </Grid>
 </Page>

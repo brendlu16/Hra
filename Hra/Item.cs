@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Hra
 {
-    abstract class Item
+    public abstract class Item
     {
+        public int ID;
         public string Name;
+        public int Hodnota;
+        public abstract List<string> VypsatStaty();
+        public abstract string InvTlacitko();
     }
 }

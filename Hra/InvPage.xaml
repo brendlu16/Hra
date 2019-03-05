@@ -24,33 +24,21 @@
         <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
         <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
         <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
+        
         <Label Content="Peníze:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="58,56,0,56"/>
         <Label Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,56,0,56" VerticalAlignment="Center"/>
         <ListBox Name="ListItemu" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" Height="280" Grid.Row="1" VerticalAlignment="Top" Width="350">
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
-            <ListBoxItem>Item</ListBoxItem>
+            <ListBoxItem>
+                <Grid Height="50" Width="335">
+                    <Rectangle HorizontalAlignment="Left" Height="50" Width="50" Fill="GreenYellow"></Rectangle>
+                    <Label Margin="50 0 0 25">VZOR</Label>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="50 0">
+                        <Label>Hodnota: 50</Label>
+                        <Label>Ochrana: 20</Label>
+                    </StackPanel>
+                    <Button HorizontalAlignment="Right" Width="50" Height="20" VerticalAlignment="Bottom">Vybavit</Button>
+                </Grid>
+            </ListBoxItem>
         </ListBox>
     </Grid>
 </Page>

@@ -75,6 +75,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Brneni.cs" />
+    <Compile Include="Helma.cs" />
+    <Compile Include="Hrac.cs" />
     <Compile Include="Inventar.cs" />
     <Compile Include="InvPage.xaml.cs">
       <DependentUpon>InvPage.xaml</DependentUpon>

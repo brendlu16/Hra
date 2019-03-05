@@ -8,5 +8,8 @@
         Title="MainWindow" Height="500" Width="800">
     <Grid>
         <Frame NavigationUIVisibility="Hidden" Name="MainFrame" HorizontalAlignment="Center" Width="800" Height="450" VerticalAlignment="Center"/>
+        <Frame NavigationUIVisibility="Hidden" Name="InvFrame"/>
+        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Right" Height="103" Stroke="Black" VerticalAlignment="Top" Width="113"/>
+        <Button Click="OpenCloseInv" HorizontalAlignment="Right" Height="103" VerticalAlignment="Top" Width="113" Background="Transparent" BorderBrush="Transparent"/>
     </Grid>
 </Window>
