@@ -15,7 +15,7 @@ namespace Hra
         }
         public override string InvTlacitko()
         {
-            return null;
+            return "Nasadit";
         }
     }
 }

@@ -9,6 +9,7 @@
       Title="InvPage">
 
     <Grid Background="White">
+        
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -20,13 +21,20 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FFFFFF" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
-        <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
-        <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
-        <Rectangle Fill="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
-        
+        <Rectangle Name="HelmaRectangle" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" Fill="#FFFFFF" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
+        <Rectangle Name="ZbranRectangle" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" Fill="#FFFFFF" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
+        <Rectangle Name="BrneniRectangle" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" Fill="#FFFFFF" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
+        <Rectangle Name="StitRectangle" MouseEnter="Rectangle_MouseEnter" MouseLeave="Rectangle_MouseLeave" Fill="#FFFFFF" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Height="80" Stroke="Black" VerticalAlignment="Center" Width="80"/>
+
+        <Popup Name="InvPopup" StaysOpen="True">
+            <Grid>
+                <Rectangle Fill="White" Stroke="Black"></Rectangle>
+                <Grid Name="InvPopupGrid"></Grid>
+            </Grid>
+        </Popup>
+
         <Label Content="Peníze:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="58,56,0,56"/>
-        <Label Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,56,0,56" VerticalAlignment="Center"/>
+        <Label Name="PenizeLabel" Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,56,0,56" VerticalAlignment="Center"/>
         <ListBox Name="ListItemu" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" Height="280" Grid.Row="1" VerticalAlignment="Top" Width="350">
             <ListBoxItem>
                 <Grid Height="50" Width="335">

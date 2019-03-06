@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,10 +24,16 @@ namespace Hra
         public InvPage()
         {
             InitializeComponent();
+            VypsatInventar();
+        }
+        public void VypsatInventar()
+        {
+            ListItemu.Items.Clear();
             foreach (var item in Hrac.Inv.Items)
             {
                 ListItemu.Items.Add(VytvoritInvTemplate(item, item.InvTlacitko()));
             }
+            PenizeLabel.Content = Hrac.Inv.Penize;
         }
         public Grid VytvoritInvTemplate(Item item, string tlacitko)
         {
@@ -71,21 +78,60 @@ namespace Hra
                     if (Hrac.Inv.VybaveneBrneni != null)
                     {
                         Hrac.Inv.Items.Add(Hrac.Inv.VybaveneBrneni);
-                        Hrac.Inv.VybaveneBrneni = item;
-                        Hrac.Inv.Items.Remove(item);
-                        NavigationService.Refresh();
-                    } else
-                    {
-                        Hrac.Inv.VybaveneBrneni = item;
-                        Hrac.Inv.Items.Remove(item);
-                        NavigationService.Refresh();
                     }
+                    Hrac.Inv.VybaveneBrneni = item;
+                    Hrac.Inv.Items.Remove(item);
                     break;
                 case "Hra.Helma":
+                    if (Hrac.Inv.VybavenaHelma != null)
+                    {
+                        Hrac.Inv.Items.Add(Hrac.Inv.VybavenaHelma);
+                    }
+                    Hrac.Inv.VybavenaHelma = item;
+                    Hrac.Inv.Items.Remove(item);
                     break;
                 default:
                     break;
             }
+            VypsatInventar();
+        }
+
+        private void Rectangle_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Rectangle rectangle = (Rectangle)sender;
+
+            switch (rectangle.Name)
+            {
+                case "BrneniRectangle":
+                    if (Hrac.Inv.VybaveneBrneni != null)
+                    {
+                        InvPopupGrid.Children.Clear();
+                        InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybaveneBrneni, null));
+                        ZobrazitPopup(rectangle);
+                    }
+                    break;
+                case "HelmaRectangle":
+                    if (Hrac.Inv.VybaveneBrneni != null)
+                    {
+                        InvPopupGrid.Children.Clear();
+                        InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybavenaHelma, null));
+                        ZobrazitPopup(rectangle);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void ZobrazitPopup(Rectangle rectangle)
+        {
+            InvPopup.PlacementTarget = rectangle;
+            InvPopup.Placement = PlacementMode.MousePoint;
+            InvPopup.IsOpen = true;
+        }
+
+        private void Rectangle_MouseLeave(object sender, MouseEventArgs e)
+        {
+            InvPopup.IsOpen = false;
         }
     }
 }

@@ -53,6 +53,7 @@ namespace Hra
             Helma helma2 = new Helma { ID = 4, Name = "Helma2", Hodnota = 150, Ochrana = 10 };
             Hrac.Inv.Items.Add(helma1);
             Hrac.Inv.Items.Add(helma2);
+            Hrac.Inv.Penize = 100;
         }
     }
 }
