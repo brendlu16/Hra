@@ -39,7 +39,8 @@ namespace Hra
         {
             Grid grid = new Grid { Height = 50, Width = 335, Name = "grid"+item.ID.ToString() };
             Rectangle obrazek = new Rectangle { Fill = Brushes.GreenYellow, Height = 50, Width = 50, HorizontalAlignment = HorizontalAlignment.Left };
-            Label nazev = new Label { Margin = new System.Windows.Thickness(50, 0, 0, 25), Content = item.Name };
+            Label nazev = new Label { Margin = new System.Windows.Thickness(50, 0, 80, 25), Content = item.Name };
+            Label hodnota = new Label { Margin = new System.Windows.Thickness(0, 0, 0, 25), HorizontalAlignment = HorizontalAlignment.Right, Content = "Hodnota: " + item.Hodnota };
             StackPanel staty = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Bottom, Margin = new Thickness(50, 0, 50, 0) };
             foreach (var Listitem in item.VypsatStaty())
             {
@@ -48,6 +49,7 @@ namespace Hra
 
             grid.Children.Add(obrazek);
             grid.Children.Add(nazev);
+            grid.Children.Add(hodnota);
             grid.Children.Add(staty);
 
             if (tlacitko != null)

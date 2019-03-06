@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Stit.cs" />
+    <Compile Include="Zbran.cs" />
     <Page Include="InvPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

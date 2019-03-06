@@ -11,7 +11,7 @@ namespace Hra
         public int Ochrana;
         public override List<string> VypsatStaty()
         {
-            return new List<string> { "Hodnota: " + Hodnota, "Ochrana: " + Ochrana.ToString() + "%" };
+            return new List<string> { "Ochrana: " + Ochrana.ToString() + "%" };
         }
         public override string InvTlacitko()
         {
