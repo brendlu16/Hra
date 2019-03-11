@@ -113,7 +113,7 @@ namespace Hra
                     }
                     break;
                 case "HelmaRectangle":
-                    if (Hrac.Inv.VybaveneBrneni != null)
+                    if (Hrac.Inv.VybavenaHelma != null)
                     {
                         InvPopupGrid.Children.Clear();
                         InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybavenaHelma, null));
