@@ -26,7 +26,7 @@ namespace Hra
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate();
+            //NavigationService.Navigate();
         }
     }
 }

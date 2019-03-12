@@ -9,7 +9,7 @@
     <Grid>
         <Frame NavigationUIVisibility="Hidden" Name="MainFrame" HorizontalAlignment="Center" Width="800" Height="450" VerticalAlignment="Center"/>
         <Frame NavigationUIVisibility="Hidden" Name="InvFrame"/>
-        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Right" Height="103" Stroke="Black" VerticalAlignment="Top" Width="113"/>
-        <Button Click="OpenCloseInv" HorizontalAlignment="Right" Height="103" VerticalAlignment="Top" Width="113" Background="Transparent" BorderBrush="Transparent"/>
+        <Rectangle Fill="#FFFFFF" HorizontalAlignment="Right" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Button Click="OpenCloseInv" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top" Width="40" Background="Transparent" BorderBrush="Transparent"/>
     </Grid>
 </Window>

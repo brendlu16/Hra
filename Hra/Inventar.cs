@@ -14,5 +14,7 @@ namespace Hra
         public int Penize;
         public Item VybaveneBrneni;
         public Item VybavenaHelma;
+        public Item VybavenaZbran;
+        public Item VybavenyStit;
     }
 }

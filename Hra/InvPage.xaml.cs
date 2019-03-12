@@ -34,10 +34,12 @@ namespace Hra
                 ListItemu.Items.Add(VytvoritInvTemplate(item, item.InvTlacitko()));
             }
             PenizeLabel.Content = Hrac.Inv.Penize;
+            ZdraviLabel.Content = Hrac.Zdravi;
+            ZdraviBar.Value = Hrac.Zdravi;
         }
         public Grid VytvoritInvTemplate(Item item, string tlacitko)
         {
-            Grid grid = new Grid { Height = 50, Width = 335, Name = "grid"+item.ID.ToString() };
+            Grid grid = new Grid { Height = 50, Width = 320, Name = "grid"+item.ID.ToString() };
             Rectangle obrazek = new Rectangle { Fill = Brushes.GreenYellow, Height = 50, Width = 50, HorizontalAlignment = HorizontalAlignment.Left };
             Label nazev = new Label { Margin = new System.Windows.Thickness(50, 0, 80, 25), Content = item.Name };
             Label hodnota = new Label { Margin = new System.Windows.Thickness(0, 0, 0, 25), HorizontalAlignment = HorizontalAlignment.Right, Content = "Hodnota: " + item.Hodnota };
@@ -92,6 +94,31 @@ namespace Hra
                     Hrac.Inv.VybavenaHelma = item;
                     Hrac.Inv.Items.Remove(item);
                     break;
+                case "Hra.Zbran":
+                    if (Hrac.Inv.VybavenaZbran != null)
+                    {
+                        Hrac.Inv.Items.Add(Hrac.Inv.VybavenaZbran);
+                    }
+                    Hrac.Inv.VybavenaZbran = item;
+                    Hrac.Inv.Items.Remove(item);
+                    break;
+                case "Hra.Stit":
+                    if (Hrac.Inv.VybavenyStit != null)
+                    {
+                        Hrac.Inv.Items.Add(Hrac.Inv.VybavenyStit);
+                    }
+                    Hrac.Inv.VybavenyStit = item;
+                    Hrac.Inv.Items.Remove(item);
+                    break;
+                case "Hra.Jidlo":
+                    Jidlo j = (Jidlo)item;
+                    Hrac.Zdravi = Hrac.Zdravi + j.Doplneni;
+                    if (Hrac.Zdravi > 100)
+                    {
+                        Hrac.Zdravi = 100;
+                    }
+                    Hrac.Inv.Items.Remove(item);
+                    break;
                 default:
                     break;
             }
@@ -117,6 +144,22 @@ namespace Hra
                     {
                         InvPopupGrid.Children.Clear();
                         InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybavenaHelma, null));
+                        ZobrazitPopup(rectangle);
+                    }
+                    break;
+                case "ZbranRectangle":
+                    if (Hrac.Inv.VybavenaZbran != null)
+                    {
+                        InvPopupGrid.Children.Clear();
+                        InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybavenaZbran, null));
+                        ZobrazitPopup(rectangle);
+                    }
+                    break;
+                case "StitRectangle":
+                    if (Hrac.Inv.VybavenyStit != null)
+                    {
+                        InvPopupGrid.Children.Clear();
+                        InvPopupGrid.Children.Add(VytvoritInvTemplate(Hrac.Inv.VybavenyStit, null));
                         ZobrazitPopup(rectangle);
                     }
                     break;

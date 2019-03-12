@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Hra
 {
-    class Stit : Item
+    class Jidlo : Item
     {
-        public int Hmotnost;
-        public int MinBlok;
-        public int MaxBlok;
+        public int Doplneni;
         public override List<string> VypsatStaty()
         {
-            return new List<string> { "Hmotnost: " + Hmotnost, "Blokování: " + MinBlok + "-" + MaxBlok };
+            return new List<string> { "Doplnění zdraví: " + Doplneni };
         }
         public override string InvTlacitko()
         {
-            return "Vybavit";
+            return "Sníst";
         }
     }
 }

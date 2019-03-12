@@ -57,7 +57,18 @@ namespace Hra
             Zbran zbran2 = new Zbran { ID = 6, Name = "Zbran2", Hodnota = 120, Ovladatelnost = 30, MinPoskozeni = 50, MaxPoskozeni = 75 };
             Hrac.Inv.Items.Add(zbran1);
             Hrac.Inv.Items.Add(zbran2);
+            Stit stit1 = new Stit { ID = 7, Name = "Stit1", Hodnota = 30, Hmotnost = 10, MinBlok = 15, MaxBlok = 25 };
+            Stit stit2 = new Stit { ID = 8, Name = "Stit2", Hodnota = 70, Hmotnost = 20, MinBlok = 15, MaxBlok = 35 };
+            Hrac.Inv.Items.Add(stit1);
+            Hrac.Inv.Items.Add(stit2);
+            Jidlo jidlo1 = new Jidlo { ID = 9, Name = "Jidlo1", Hodnota = 30, Doplneni = 15 };
+            Jidlo jidlo2 = new Jidlo { ID = 10, Name = "Jidlo2", Hodnota = 40, Doplneni = 25 };
+            Jidlo jidlo3 = new Jidlo { ID = 11, Name = "Jidlo3", Hodnota = 30, Doplneni = 15 };
+            Hrac.Inv.Items.Add(jidlo1);
+            Hrac.Inv.Items.Add(jidlo2);
+            Hrac.Inv.Items.Add(jidlo3);
             Hrac.Inv.Penize = 100;
+            Hrac.Zdravi = 55;
         }
     }
 }

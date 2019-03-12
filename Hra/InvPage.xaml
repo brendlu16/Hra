@@ -9,7 +9,7 @@
       Title="InvPage">
 
     <Grid Background="White">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -33,18 +33,25 @@
             </Grid>
         </Popup>
 
-        <Label Content="Peníze:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="58,56,0,56"/>
-        <Label Name="PenizeLabel" Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,56,0,56" VerticalAlignment="Center"/>
+        <ProgressBar Name="ZdraviBar" Background="White" Maximum="100" BorderBrush="Black" Foreground="Green" Grid.Column="3" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="300" Margin="0,50,0,0"/>
+        <Label Content="Peníze:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="58,60,0,0"/>
+        <Label Name="PenizeLabel" Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,60,0,0" VerticalAlignment="Center"/>
+        <Label Content="Zdraví:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="233,60,0,0"/>
+        <Label Name="ZdraviLabel" Content="100" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="295,60,0,0" VerticalAlignment="Center"/>
         <ListBox Name="ListItemu" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" Height="280" Grid.Row="1" VerticalAlignment="Top" Width="350">
             <ListBoxItem>
                 <Grid Height="50" Width="335">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="308*"/>
+                        <ColumnDefinition Width="27*"/>
+                    </Grid.ColumnDefinitions>
                     <Rectangle HorizontalAlignment="Left" Height="50" Width="50" Fill="GreenYellow"></Rectangle>
-                    <Label Margin="50 0 80 25">VZOR</Label>
-                    <Label Margin="0 0 0 25" HorizontalAlignment="Right">Hodnota: 50</Label>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="50 0">
+                    <Label Margin="50,0,53,25">VZOR</Label>
+                    <Label Margin="0 0 0 25" HorizontalAlignment="Right" Grid.ColumnSpan="2">Hodnota: 50</Label>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="50,0,23,0">
                         <Label>Ochrana: 20</Label>
                     </StackPanel>
-                    <Button HorizontalAlignment="Right" Width="50" Height="20" VerticalAlignment="Bottom">Vybavit</Button>
+                    <Button HorizontalAlignment="Right" Width="50" Height="20" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Vybavit</Button>
                 </Grid>
             </ListBoxItem>
         </ListBox>
