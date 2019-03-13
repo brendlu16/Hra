@@ -124,7 +124,6 @@ namespace Hra
             }
             VypsatInventar();
         }
-
         private void Rectangle_MouseEnter(object sender, MouseEventArgs e)
         {
             Rectangle rectangle = (Rectangle)sender;

@@ -20,7 +20,6 @@ namespace Hra
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool InvOtevren = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,15 +28,15 @@ namespace Hra
         }
         private void OpenCloseInv(object sender, RoutedEventArgs e)
         {
-            if (InvOtevren)
+            if (Globals.InvOtevren)
             {
                 InvFrame.Navigate(null);
-                InvOtevren = false;
+                Globals.InvOtevren = false;
             }
             else
             {
                 InvFrame.Navigate(new InvPage());
-                InvOtevren = true;
+                Globals.InvOtevren = true;
             }
         }
         public void VytvoritTestInventar()
@@ -63,10 +62,16 @@ namespace Hra
             Hrac.Inv.Items.Add(stit2);
             Jidlo jidlo1 = new Jidlo { ID = 9, Name = "Jidlo1", Hodnota = 30, Doplneni = 15 };
             Jidlo jidlo2 = new Jidlo { ID = 10, Name = "Jidlo2", Hodnota = 40, Doplneni = 25 };
-            Jidlo jidlo3 = new Jidlo { ID = 11, Name = "Jidlo3", Hodnota = 30, Doplneni = 15 };
+            //Jidlo jidlo3 = new Jidlo { ID = 11, Name = "Jidlo3", Hodnota = 30, Doplneni = 15 };
             Hrac.Inv.Items.Add(jidlo1);
             Hrac.Inv.Items.Add(jidlo2);
-            Hrac.Inv.Items.Add(jidlo3);
+            Hrac.Inv.Items.Add(jidlo1);
+            Hrac.Inv.Items.Add(jidlo1);
+            //Hrac.Inv.Items.Add(jidlo3);
+            SpecialniZbran kuse = new SpecialniZbran { ID = 12, Name = "Kuse", Hodnota = 80, Presnost = 50, MinPoskozeni = 40, MaxPoskozeni = 60 };
+            SpecialniZbran luk = new SpecialniZbran { ID = 13, Name = "Luk", Hodnota = 70, Presnost = 30, MinPoskozeni = 35, MaxPoskozeni = 70 };
+            Hrac.Inv.Items.Add(kuse);
+            Hrac.Inv.Items.Add(luk);
             Hrac.Inv.Penize = 100;
             Hrac.Zdravi = 55;
         }

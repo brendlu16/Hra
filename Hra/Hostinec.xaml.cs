@@ -16,17 +16,18 @@ using System.Windows.Shapes;
 namespace Hra
 {
     /// <summary>
-    /// Interakční logika pro MenuPage.xaml
+    /// Interakční logika pro Hostinec.xaml
     /// </summary>
-    public partial class MenuPage : Page
+    public partial class Hostinec : Page
     {
-        public MenuPage()
+        public Hostinec()
         {
             InitializeComponent();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ShopPage());
+
         }
     }
 }

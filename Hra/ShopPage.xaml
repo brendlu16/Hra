@@ -1,0 +1,27 @@
+﻿<Page x:Class="Hra.ShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hra"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ShopPage">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Peníze:" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="58,0,0,0"/>
+        <Label Name="PenizeLabel" Content="0" FontSize="20" Grid.Column="3" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Center"/>
+        <ListBox Name="ListItemuNPC" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Center" Height="400" Grid.Row="0" VerticalAlignment="Center" Width="350"></ListBox>
+        <ListBox Name="ListItemu" Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Center" Height="280" Grid.Row="1" VerticalAlignment="Top" Width="350"></ListBox>
+    </Grid>
+</Page>

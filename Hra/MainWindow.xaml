@@ -11,5 +11,6 @@
         <Frame NavigationUIVisibility="Hidden" Name="InvFrame"/>
         <Rectangle Fill="#FFFFFF" HorizontalAlignment="Right" Height="40" Stroke="Black" VerticalAlignment="Top" Width="40"/>
         <Button Click="OpenCloseInv" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top" Width="40" Background="Transparent" BorderBrush="Transparent"/>
+        <Frame NavigationUIVisibility="Hidden" Name="OverlayFrame"/>
     </Grid>
 </Window>
