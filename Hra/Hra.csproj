@@ -60,6 +60,7 @@
       <DependentUpon>Hostinec.xaml</DependentUpon>
     </Compile>
     <Compile Include="Jidlo.cs" />
+    <Compile Include="NPC.cs" />
     <Compile Include="ShopPage.xaml.cs">
       <DependentUpon>ShopPage.xaml</DependentUpon>
     </Compile>

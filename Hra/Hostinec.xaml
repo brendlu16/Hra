@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="Tavern.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Rectangle Width="100" Height="120" Margin="491,173,229,157" Stroke="Black"></Rectangle>
-        <Button Width="100" Height="120" Margin="491,173,229,157" Background="Transparent" BorderBrush="Transparent" Click="Button_Click"></Button> 
+        <Rectangle Width="100" Height="120" Margin="491,173,209,157" Stroke="Black"></Rectangle>
+        <Button Width="100" Height="120" Margin="491,173,209,157" Background="Transparent" BorderBrush="Transparent" Click="Button_Click"></Button> 
     </Grid>
 </Page>
