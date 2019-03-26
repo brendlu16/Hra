@@ -56,22 +56,32 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Globals.cs" />
-    <Compile Include="Hostinec.xaml.cs">
+    <Compile Include="lokace\Hostinec.xaml.cs">
       <DependentUpon>Hostinec.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Jidlo.cs" />
+    <Compile Include="items\Jidlo.cs" />
+    <Compile Include="lokace\Les.xaml.cs">
+      <DependentUpon>Les.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NPC.cs" />
     <Compile Include="ShopPage.xaml.cs">
       <DependentUpon>ShopPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SpecialniZbran.cs" />
-    <Compile Include="Stit.cs" />
-    <Compile Include="Zbran.cs" />
-    <Page Include="Hostinec.xaml">
+    <Compile Include="items\SpecialniZbran.cs" />
+    <Compile Include="items\Stit.cs" />
+    <Compile Include="items\Zbran.cs" />
+    <Compile Include="Souboj.xaml.cs">
+      <DependentUpon>Souboj.xaml</DependentUpon>
+    </Compile>
+    <Page Include="lokace\Hostinec.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InvPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lokace\Les.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,14 +93,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Brneni.cs" />
-    <Compile Include="Helma.cs" />
+    <Compile Include="items\Brneni.cs" />
+    <Compile Include="items\Helma.cs" />
     <Compile Include="Hrac.cs" />
     <Compile Include="Inventar.cs" />
     <Compile Include="InvPage.xaml.cs">
       <DependentUpon>InvPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Item.cs" />
+    <Compile Include="items\Item.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ShopPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Souboj.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,7 +148,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Tavern.png" />
+    <Resource Include="img\Tavern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\env1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

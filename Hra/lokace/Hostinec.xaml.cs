@@ -29,5 +29,10 @@ namespace Hra
         {
             NavigationService.Navigate(new ShopPage());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Les());
+        }
     }
 }
