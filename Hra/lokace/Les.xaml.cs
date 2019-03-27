@@ -27,7 +27,7 @@ namespace Hra
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Souboj("Tavern.png", this));
+            NavigationService.Navigate(new Souboj("Tavern.png", new Les()));
         }
     }
 }

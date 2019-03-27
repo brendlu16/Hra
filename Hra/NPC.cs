@@ -10,5 +10,6 @@ namespace Hra
     {
         public int ID;
         public Inventar Inv;
+        public int Zdravi;
     }
 }

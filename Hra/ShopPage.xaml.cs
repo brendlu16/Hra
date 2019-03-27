@@ -123,11 +123,13 @@ namespace Hra
             Npc.Inv.Items.Add(helma2);
             Zbran zbran2 = new Zbran { ID = 6, Name = "Zbran2", Hodnota = 120, Ovladatelnost = 30, MinPoskozeni = 50, MaxPoskozeni = 75 };
             Npc.Inv.Items.Add(zbran2);
-            Stit stit2 = new Stit { ID = 8, Name = "Stit2", Hodnota = 70, Hmotnost = 20, MinBlok = 15, MaxBlok = 35 };
+            Stit stit2 = new Stit { ID = 8, Name = "Stit2", Hodnota = 70, Hmotnost = 70, MinBlok = 15, MaxBlok = 35 };
             Npc.Inv.Items.Add(stit2);
             Jidlo jidlo3 = new Jidlo { ID = 11, Name = "Jidlo3", Hodnota = 30, Doplneni = 30 };
             Npc.Inv.Items.Add(jidlo3);
             Npc.Inv.Items.Add(jidlo3);
+            Zbran zbran20 = new Zbran { ID = 1337, Name = "OP zbran", Hodnota = 10, Ovladatelnost = 1, MinPoskozeni = 30, MaxPoskozeni = 250 };
+            Npc.Inv.Items.Add(zbran20);
         }
         private void ZavritShop(object sender, RoutedEventArgs e)
         {
